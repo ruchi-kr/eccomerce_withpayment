@@ -1,0 +1,40 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "front-end": "npm start --prefix ./front-end",
+    "dev": "concurrently \"npm run server\" \"npm run front-end\""
+  },
+  "keywords": [],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prem9084/E-commerce-MERN-stack-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prem9084/E-commerce-MERN-stack-project/issues"
+  },
+  "homepage": "https://github.com/prem9084/E-commerce-MERN-stack-project#readme",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "braintree": "^3.20.0",
+    "colors": "^1.4.0",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.2",
+    "slugify": "^1.6.6"
+  }
+}
