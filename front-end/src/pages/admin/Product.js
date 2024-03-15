@@ -11,7 +11,7 @@ const Product = () => {
 
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/products/get-products");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/products/get-products");
       setProducts(data.products);
     } catch (error) {
       console.log(error);
@@ -43,7 +43,7 @@ const Product = () => {
                   key={p._id}
                 >
                   <img
-                    src={`/api/v1/products/products-photo/${p._id}`}
+                    src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                   />

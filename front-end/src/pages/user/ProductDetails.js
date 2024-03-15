@@ -20,7 +20,7 @@ const ProductDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/products/single-product/${params.slug}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/single-product/${params.slug}`
       );
       setProducts(data?.products);
       getSimilarProducts(data?.products._id, data?.products.category._id);
@@ -34,7 +34,7 @@ const ProductDetails = () => {
   const getSimilarProducts = async (pid, cid) => {
     try {
       const { data } = await axios(
-        `/api/v1/products/releted-products/${pid}/${cid}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/releted-products/${pid}/${cid}`
       );
       setReletedProducts(data?.products);
     } catch (error) {
@@ -46,7 +46,7 @@ const ProductDetails = () => {
       <div className="row container product-details">
         <div className="col-md-6">
           <img
-            src={`/api/v1/products/products-photo/${products._id}`}
+            src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${products._id}`}
             className="card-img-top"
             alt={products.name}
             height="300"
@@ -79,7 +79,7 @@ const ProductDetails = () => {
           {reletedProducts?.map((p) => (
             <div className="card m-2" key={p._id}>
               <img
-                src={`/api/v1/products/products-photo/${p._id}`}
+                src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${p._id}`}
                 className="card-img-top"
                 alt={p.name}
               />

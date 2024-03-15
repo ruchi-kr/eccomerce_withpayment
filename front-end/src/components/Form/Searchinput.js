@@ -10,7 +10,7 @@ const Searchinput = () => {
     try {
       e.preventDefault();
       const { data } = await axios.get(
-        `/api/v1/products/serach/${values.keyword}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/serach/${values.keyword}`
       );
       setValues({ ...values, results: data });
       navigate("/search");

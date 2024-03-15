@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   const getSingleProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/products/single-product/${params.slug}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/single-product/${params.slug}`
       );
       setName(data.products.name);
       setId(data.products._id);
@@ -47,13 +47,13 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-categoris");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/category/get-categoris");
       if (data?.success) {
         setCategories(data?.category);
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something wwent wrong in getting catgeory");
+      toast.error("Something went wrong in getting catgeory");
     }
   };
 
@@ -73,7 +73,7 @@ const UpdateProduct = () => {
       photo && productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.put(
-        `/api/v1/products/update-product/${id}`,
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/update-product/${id}`,
         productData
       );
       if (data?.success) {
@@ -94,7 +94,7 @@ const UpdateProduct = () => {
       let answer = window.prompt("Are you sure you want to delete ?");
       if (!answer) return;
       const { data } = await axios.delete(
-        `/api/v1/products/delete-products/${id}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/delete-products/${id}`
       );
       toast.success("Product deleted successfully");
       navigate("/deshboard/admin/product");
@@ -156,7 +156,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={`/api/v1/products/products-photo/${id}`}
+                      src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"

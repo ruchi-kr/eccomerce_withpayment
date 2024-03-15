@@ -50,7 +50,7 @@ const CartPage = () => {
 
   const getToken = async () => {
     try {
-      const { data } = await axios.get("/api/v1/products/barintree/token");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/products/barintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {}
   };
@@ -64,7 +64,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("/api/v1/products/barintree/payment", {
+      const { data } = await axios.post("https://eccomerce-withpayment.onrender.com/api/v1/products/barintree/payment", {
         nonce,
         cart,
       });
@@ -101,7 +101,7 @@ const CartPage = () => {
               <div className="row mb-2 p-3 card flex-row">
                 <div className="col-md-4">
                   <img
-                    src={`/api/v1/products/products-photo/${p._id}`}
+                    src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
                     width="100px"

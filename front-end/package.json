@@ -1,6 +1,6 @@
 {
   "name": "front-end",
-  "proxy": "http://localhost:8000",
+  "proxy": "https://eccomerce-withpayment.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

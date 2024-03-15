@@ -22,7 +22,7 @@ const Search = () => {
                 key={p._id}
               >
                 <img
-                  src={`/api/v1/products/products-photo/${p._id}`}
+                  src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${p._id}`}
                   className="card-img-top"
                   height={"200px"}
                   alt={p.name}

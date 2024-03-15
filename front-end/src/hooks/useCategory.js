@@ -6,7 +6,7 @@ export default function useCategory() {
 
   const getCategoris = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-categoris");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/category/get-categoris");
       setCategory(data?.category);
     } catch (error) {
       console.log(error);

@@ -11,7 +11,7 @@ const Users = () => {
 
   const getAllUsers = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/users/alluser`);
+      const { data } = await axios.get(`https://eccomerce-withpayment.onrender.com/api/v1/users/alluser`);
       setUsers(data.user);
       setTotalUser(data.totalCount);
     } catch (error) {
@@ -23,7 +23,7 @@ const Users = () => {
   const handleDelete = async (id) => {
     try {
       const { data } = await axios.delete(
-        `/api/v1/users/delete/${id}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/users/delete/${id}`
       );
       toast.success(data.message);
     } catch (error) {

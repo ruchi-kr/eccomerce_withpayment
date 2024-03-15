@@ -24,7 +24,7 @@ const HomePage = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-categoris");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/category/get-categoris");
       if (data?.success) {
         setCategoris(data?.category);
       }
@@ -44,7 +44,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/v1/products/products-list/${page}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/products-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -58,7 +58,7 @@ const HomePage = () => {
 
   const getTotal = async () => {
     try {
-      const { data } = await axios.get("/api/v1/products/products-count");
+      const { data } = await axios.get("https://eccomerce-withpayment.onrender.com/api/v1/products/products-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -75,7 +75,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        `/api/v1/products/products-list/${page}`
+        `https://eccomerce-withpayment.onrender.com/api/v1/products/products-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -111,7 +111,7 @@ const HomePage = () => {
 
   const filterProducts = async () => {
     try {
-      const { data } = await axios.post("/api/v1/products/products-filter", {
+      const { data } = await axios.post("https://eccomerce-withpayment.onrender.com/api/v1/products/products-filter", {
         checked,
         radio,
       });
@@ -223,7 +223,7 @@ const HomePage = () => {
             {products?.map((p) => (
               <div className="card m-2 m-auto mt-3" key={p._id}>
                 <img
-                  src={`/api/v1/products/products-photo/${p._id}`}
+                  src={`https://eccomerce-withpayment.onrender.com/api/v1/products/products-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
