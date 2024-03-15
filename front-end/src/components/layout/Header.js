@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-white">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -44,7 +44,24 @@ const Header = () => {
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <Searchinput />
-              <li className="nav-item">
+              
+
+              {!auth.user ? (
+                <>
+                  <li className="nav-item">
+                    <NavLink to="/register" className="nav-link">
+                      Register
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/login" className="nav-link">
+                      Login
+                    </NavLink>
+                  </li>
+                </>
+              ) : (
+                <>
+                <li className="nav-item">
                 <NavLink to="/" className="nav-link">
                   Home
                 </NavLink>
@@ -76,22 +93,6 @@ const Header = () => {
                   ))}
                 </ul>
               </li>
-
-              {!auth.user ? (
-                <>
-                  <li className="nav-item">
-                    <NavLink to="/register" className="nav-link">
-                      Register
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink to="/login" className="nav-link">
-                      Login
-                    </NavLink>
-                  </li>
-                </>
-              ) : (
-                <>
                   <li className="nav-item dropdown">
                     <NavLink
                       className="nav-link dropdown-toggle"
@@ -109,7 +110,7 @@ const Header = () => {
                           }`}
                           className="dropdown-item"
                         >
-                          Deshboard
+                          Dashboard
                         </NavLink>
                       </li>
                       <li>

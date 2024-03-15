@@ -76,7 +76,7 @@ const Login = () => {
                 navigate("/forgot-Password");
               }}
             >
-              Forgote Password
+              Forgot Password
             </button>
           </div>
           <button type="submit" className="btn btn-primary">
