@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-white">
+      <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -40,7 +40,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              <HiShoppingBag /> GMart
+               Style Up
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <Searchinput />

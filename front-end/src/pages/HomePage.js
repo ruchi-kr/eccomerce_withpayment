@@ -134,7 +134,7 @@ const HomePage = () => {
         <div className="carousel-inner mt-3">
           <div className="carousel-item active">
             <img
-              src="https://img.pikbest.com/origin/06/32/51/96wpIkbEsTXVv.png!bw700"
+              src="https://images-static.nykaa.com/uploads/db677d45-8898-4b5e-b11e-5d2670d12291.jpg?tr=w-2400,cm-pad_resize"
               className="d-block w-100"
               alt="..."
               height={"350vh"}
@@ -142,7 +142,7 @@ const HomePage = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://static.vecteezy.com/system/resources/previews/001/937/856/non_2x/paper-art-shopping-online-on-smartphone-sale-promotion-backgroud-banner-for-market-ecommerce-free-vector.jpg"
+              src="https://images-static.nykaa.com/uploads/d3cd6d03-4070-47cb-859a-a14f81167a1e.jpg?tr=w-2400,cm-pad_resize"
               className="d-block w-100"
               alt="..."
               height={"350vh"}
@@ -150,7 +150,7 @@ const HomePage = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="https://img.freepik.com/free-psd/special-sales-banner-template_23-2148975924.jpg"
+              src="https://images-static.nykaa.com/uploads/e80ca58d-6d11-472c-a8ee-50c8318b0d9f.jpg?tr=w-2400,cm-pad_resize"
               className="d-block w-100"
               alt="..."
               height={"350vh"}
